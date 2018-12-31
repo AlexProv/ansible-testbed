@@ -1,0 +1,8 @@
+ansible-playbook -i inventory/ site.yml
+
+
+https://serversforhackers.com/c/how-ansible-vault-works
+ansible-vault decrypt file
+ansible-vault encrypt file
+
+ansible-playbook --ask-vault-pass -i inventory/ site.yml 

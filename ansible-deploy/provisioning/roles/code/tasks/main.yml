@@ -1,0 +1,24 @@
+---
+# this playbook contains all actions to download and launch the code container
+- debug:
+    msg: "testvar {{ password.dockerhub }}"
+
+- name: login dockerhub
+  docker_login:
+    email: "alex.prov24@gmail.com"
+    username: "alxprov"
+    password: "{{ password.dockerhub }}"
+    state: present
+  register: login_results
+
+# - debug:
+#     var: login_results
+
+- name: Pull code container
+  docker_container: 
+    name: testbed
+    image: alxprov/testbed:latest
+    state: started
+    pull: true
+    ports:
+      - "80:80"

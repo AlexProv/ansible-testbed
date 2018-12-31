@@ -1,0 +1,10 @@
+---
+# this playbook will set up everything and call the sub roles
+
+- name: Configurations to "remote" host
+  hosts: remote
+  remote_user: alex
+  become: yes
+  roles: 
+    - setup
+    - code

@@ -1,0 +1,9 @@
+---
+# this playbook contains common handlers that can be 
+
+# sudo systemctrl enable docker
+- name: Start docker on boot
+  systemd:
+    name: docker
+    state: started
+    enabled: yes

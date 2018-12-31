@@ -1,0 +1,7 @@
+---
+# variables for the setup roles
+
+# ansible_python_interpreter: /usr/bin/python3
+
+remote_user: alex
+docker_group: docker
